@@ -5,9 +5,10 @@ This module ```(mainClass.py)``` provides an API(GET method) that returns some m
 Initialize a virtual environment and install the requirements in requirements.txt.
 Run ```mainClass.py``` which starts a server(ideally on port 5000, but can verify on the console when it starts).
 
-##Usage
-This API is a get call with minLtitude, maxLatitude, minLongitude, maxLongitude as mandatory query parameters. 
+## Usage
+This API is a get call with minLatitude, maxLatitude, minLongitude, maxLongitude as mandatory query parameters with cordinate values within Berlin.
 requestCount parameter is where number_of_requests is the number of requests to our Ridepooling service to "simulate".If not provided, default value of 2 is taken.
+
 Example : http://localhost:5000/v2/simulator?minLatitude=13.34014892578125&maxLatitude=52.52791908000258&minLongitude=13.506317138671875&maxLongitude=52.562995039558004&requestCount=500
 
 ## Output
