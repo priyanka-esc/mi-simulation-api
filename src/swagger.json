@@ -1,0 +1,69 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Mobility Intelligence API",
+    "version": "1.0.0",
+    "title": "Mobility Intelligence API"
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "basePath": "/v2/",
+  "paths": {
+    "/simulator": {
+      "get": {
+        "operationId": "simulator.getSimulations",
+        "tags": [
+          "Simulation"
+        ],
+        "parameters": [
+            {
+              "in": "query",
+              "name": "minLatitude",
+              "type": "number",
+              "description": "minimum latitude",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "maxLatitude",
+              "type": "number",
+              "description": "maximum latitude",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "minLongitude",
+              "type": "number",
+              "description": "minimum longitude",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "maxLongitude",
+              "type": "number",
+              "description": "maximum longitude",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "requestCount",
+              "type": "integer",
+              "description": "number of requests",
+              "required": false
+            }
+          ],
+        "summary": "Simulated data of mobility intelligence team",
+        "description": "get bins and popular pick up and drop points",
+        "responses": {
+          "200": {
+            "description": "Successful read simulation operation"
+          }
+        }
+      }
+    }
+  }
+}
